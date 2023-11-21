@@ -7,13 +7,13 @@ void setup(){
 
 void draw(){
   background(0);
-  for (int i = particles.size()-1; i > 0; i--){
-    particles.get(i).update();
-    particles.get(i).display();
+  for (int j = particles.size()-1; j > 0; j--){
+    particles.get(j).update();
+    particles.get(j).display();
     
-    if(particles.get(i).position.y > 400)
+    if(particles.get(j).position.y > 400)
     {
-      particles.remove(i);
+      particles.remove(j);
     }
   }
   if(mousePressed == true) {
